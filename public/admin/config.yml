@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: terrierscript/today-inu-learned
+  repo: inuscript/example-phenomic
   # name: git-gateway
   # branch: master
 media_folder: contents/img
