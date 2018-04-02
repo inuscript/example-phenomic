@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, browserHistory } from "react-router";
+import { Route, BrowserRouter } from "react-router-dom";
 import { createApp } from "@phenomic/preset-react-app/lib/client";
 import { BlogPostContainer } from "./BlogPost";
 
@@ -10,8 +10,8 @@ const Home = () => (
 );
 
 export default createApp(() => (
-  <Router history={browserHistory}>
+  <BrowserRouter>
     <Route path="/" component={Home} />
     <Route path="/blog/*" component={BlogPostContainer} />
-  </Router>
+  </BrowserRouter>
 ));
