@@ -1,0 +1,36 @@
+backend:
+  name: github
+  repo: terrierscript/today-inu-learned
+  # name: git-gateway
+  # branch: master
+media_folder: contents/img
+public_folder: /img
+publish_mode: editorial_workflow
+collections:
+  - name: blog
+    label: Blog
+    folder: contents/blog
+    create: true
+    # TODO: use Hsi
+    slug: '{{year}}-{{month}}-{{day}}-000000-{{slug}}'
+    # slug: '{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}{{second}}-{{slug}}'
+    fields:
+      - label: Template Key
+        name: templateKey
+        widget: hidden
+        default: blog-post
+      - label: Path (slug)
+        name: path
+        widget: string
+      - label: Heading
+        name: heading
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Tags
+        name: tags
+        widget: list
